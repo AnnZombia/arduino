@@ -42,9 +42,9 @@ void loop(){
       if(time.Hours>=8&&time.Hours<23) {
         digitalWrite(4, LOW);}
       else {digitalWrite(4, HIGH); }
-      if((time.Hours==10&&time.minutes==00&&time.seconds==00) {
+      if(time.Hours==10&&time.minutes==00&&time.seconds==00) {
          digitalWrite(PIN_MOTOR, HIGH); 
-         r = analogRead(res)*250;
+         r = analogRead(res)*150;
          Serial.println(r);
          delay(r); 
          digitalWrite(PIN_MOTOR, LOW);
